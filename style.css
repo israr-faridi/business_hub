@@ -1,0 +1,888 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: #e0e0e0;
+}
+
+nav {
+    caret-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+nav .logo {
+    width: 150px;
+}
+
+nav .logo img {
+    width: 100%;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #464545;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 10px 5px;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 5px;
+    transition: color 0.5s, border-bottom-color 0.5s;
+}
+
+nav ul li a:hover {
+    transform: 0.3s all ease-in-out;
+    color: #154A94;
+    border-bottom: 3px solid #154A94;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* border-width: 4px; */
+}
+
+.menu {
+    display: none;
+    cursor: pointer;
+}
+
+.menu span {
+    font-size: 2rem;
+    color: #000;
+    /* display: none; */
+}
+
+
+
+
+/*////////////////////// 
+//Main Product Start/// 
+///////////////////////*/
+.main_product_heading {
+    position: relative;
+    caret-color: transparent;
+}
+
+.main_product_heading h2 {
+    position: absolute;
+    left: 38%;
+    /* right: 35%; */
+    top: 50px;
+    color: transparent;
+    -webkit-text-stroke: 1px #154A94;
+    font-size: 6rem;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -5px;
+}
+
+/*//////////////////// 
+//Main Product ENd/// 
+/////////////////////*/
+
+/*///////////////////// 
+//OUR 3D MODEL START//
+/////////////////////*/
+
+/* /////////////////////
+  //3D CAROUSEL START//
+ /////////////////////*/
+.main_carousel {
+    height: 700px;
+    /* background: rgba(233, 230, 220, 0.459); */
+    caret-color: transparent;
+
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+#dragcontainer,
+#spincontainer {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    margin: auto;
+
+
+
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    -webkit-transform: rotateX(-10deg);
+    transform: rotateX(-10deg);
+}
+
+
+#dragcontainer img {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+
+
+    width: 100%;
+    height: 100%;
+    /* border-radius:  ; */
+
+    line-height: 200px;
+    font-size: 50px;
+    text-align: center;
+
+    -webkit-box-shadow: 0 0 8px rgb(102, 96, 96);
+    box-shadow: 0 0 8px rgb(102, 96, 96);
+
+    -webkit-box-reflect: below 10px linear-gradient (transparent, transparent, #0005);
+}
+
+#dragcontainer img:hover {
+    -webkit-box-shadow: 0 0 15px rgb(102, 96, 96);
+    box-shadow: 0 0 15px rgb(102, 96, 96);
+
+    -webkit-box-reflect: below 10px linear-gradient (transparent, transparent, #0007);
+}
+
+
+#dragcontainer p {
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    font-size: 1.2rem;
+    -webkit-transform: translate(-50%, -50%) rotateX(90deg);
+    transform: translate(-50%, -50%) rotateX(90deg);
+
+    color: rgb(59, 59, 59);
+    font-weight: 600;
+}
+
+
+
+#ground {
+    width: 900px;
+    height: 900px;
+
+    position: absolute;
+    top: 100%;
+    left: 50%;
+
+    -webkit-transform: translate(-50%, -50%) rotateX(90deg);
+    transform: translate(-50%, -50%) rotateX(90deg);
+
+
+    background: -webkit-radial-gradient(center center, farthest-side, #696363c2, transparent);
+}
+
+
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+    }
+
+    to {
+        -webkit-transform: rotateY(360deg);
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes spin {
+    from {
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+    }
+
+    to {
+        -webkit-transform: rotateY(360deg);
+        transform: rotateY(360deg);
+    }
+}
+
+
+
+@-webkit-keyframes spinrevert {
+    from {
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+    }
+
+    to {
+        -webkit-transform: rotateY(360deg);
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes spinrevert {
+    from {
+        -webkit-transform: rotateY(360deg);
+        transform: rotateY(360deg);
+    }
+
+    to {
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+    }
+}
+
+/*///////////////////
+  //3D CAROUSEL END//
+ ///////////////////*/
+
+
+
+/* About Start */
+.about {
+    caret-color: transparent;
+    text-align: center;
+    padding: 10px 10px;
+    width: 80%;
+    margin: auto;
+}
+
+.heading {
+    display: flex;
+    caret-color: transparent;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.heading h1 {
+    color: #154A94;
+    /* text-align: center; */
+    font-size: 3.9rem;
+    font-weight: 700;
+    /* margin-bottom: 20px; */
+    line-height: 1;
+}
+
+.heading .image {
+    width: 3.6rem;
+    height: 60px;
+}
+
+.heading .image img {
+    width: 100%;
+    object-fit: contain;
+}
+
+
+.about p {
+    color: #464545;
+    font-size: 1rem;
+    word-wrap: break-word;
+    word-spacing: 5px;
+    line-height: 25px;
+    text-align: justify;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* About End */
+
+/* Raw Material Start */
+.raw_material {
+    padding: 100px 180px;
+    caret-color: transparent;
+}
+
+
+/* /////////////
+//// Pharma ///
+////////////// */
+.cosmetics,
+.pharma,
+.food {
+    margin-top: 90px;
+    /* border: 1px solid red; */
+}
+
+.cosmetics h2,
+.pharma h2,
+.food h2 {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #154A94;
+    font-size: 2.5rem;
+}
+
+.cosmetics_data,
+.pharma_data,
+.food_data {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cosmetics_image,
+.pharma_image,
+.food_image {
+    width: 50%;
+    height: 350px;
+    /* border: 1px solid rebeccapurple; */
+    margin-right: 50px;
+}
+
+.cosmetics_image img,
+.pharma_image img,
+.food_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.35));
+    /* Realistic shadow */
+}
+
+.cosmetics_image img:hover,
+.pharma_image img:hover,
+.food_image img:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.cosmetics_text,
+.pharma_text,
+.food_text {
+    width: 50%;
+    padding: 0 20px;
+    /* display: flex; */
+    align-items: center;
+    font-size: 1.1rem;
+    color: #464545;
+    /* border: 1px solid red; */
+    font-weight: 500;
+    line-height: 25px;
+
+}
+
+.cosmetics_text ul li,
+.pharma_text ul li,
+.food_text ul li {
+    line-height: 35px;
+    font-size: 1.1rem;
+}
+
+.cosmetics_text ul li ul {
+    margin-left: 20px;
+}
+
+/* ///////////////////////
+///// Nutraceuticals ////
+//////////////////////// */
+
+.nutraceuticals,
+.machinery,
+.packaging {
+    margin-top: 120px;
+    /* border: 1px solid red; */
+}
+
+.nutraceuticals h2,
+.machinery h2,
+.packaging h2 {
+    color: #154A94;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+
+.nutraceuticals_data,
+.machinery_data,
+.packaging_data {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nutraceuticals_image,
+.machinery_image,
+.packaging_image {
+    width: 50%;
+    height: 350px;
+    /* border: 1px solid rebeccapurple; */
+    margin-right: 50px;
+}
+
+.nutraceuticals_image img,
+.machinery_image img,
+.packaging_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.35));
+    /* Realistic shadow */
+}
+
+.nutraceuticals_image img:hover,
+.machinery_image img:hover,
+.packaging_image img:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.nutraceuticals_text,
+.machinery_text,
+.packaging_text {
+    width: 50%;
+    padding: 0 20px;
+    font-size: 1.1rem;
+    color: #464545;
+    /* border: 1px solid red; */
+    font-weight: 500;
+    line-height: 25px;
+    /* display: flex;
+    justify-content: center; */
+    align-items: center;
+}
+
+.nutraceuticals_text ul li,
+.machinery_text ul li,
+.packaging_text ul li {
+    line-height: 35px;
+    font-size: 1.1rem;
+}
+
+
+/* Raw Material End */
+
+
+/* /////////////////////////
+//////// Responsive /////// 
+//////////////////////////*/
+@media screen and (max-width: 1024px) {
+    .raw_material {
+        padding: 100px 140px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .logo {
+        z-index: 99;
+    }
+
+    .raw_material {
+        padding: 100px 60px;
+    }
+
+    .menu {
+        display: block;
+        z-index: 99;
+    }
+
+    .menu .fa-bars {
+        display: block;
+    }
+
+    .menu .fa-xmark {
+        display: none;
+    }
+
+
+
+    nav ul {
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 40%;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateX(100%);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    nav ul li a {
+        font-size: 1.5rem;
+        color: #000;
+        font-weight: 500;
+        border-bottom: 1px solid transparent;
+        padding-bottom: 5px;
+        transition: color 0.5s, border-bottom-color 0.5s;
+    }
+
+    nav ul li a:hover {
+        color: #555;
+        border-bottom: 1px solid #555;
+    }
+
+    nav.active {
+        overflow-y: hidden;
+    }
+
+    .active ul {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateX(0%);
+        z-index: 1;
+        background: #e0e0e0;
+        height: 100vh;
+        box-shadow: -2px 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .active .fa-bars {
+        display: none;
+    }
+
+    .active .fa-xmark {
+        top: 0;
+        right: 0;
+        padding-top: 15px;
+        padding-right: 50px;
+        display: block;
+        position: fixed;
+
+    }
+
+}
+
+
+@media screen and (max-width: 880px) {
+
+    .main_product_heading h2 {
+        left: 25%;
+    }
+
+    nav .logo {
+        width: 130px;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .main_carousel {
+        height: 650px;
+    }
+
+    .about {
+        padding-top: 0;
+    }
+
+    .about p {
+        word-spacing: 2px;
+    }
+
+    .raw_material {
+        padding: 70px 30px;
+    }
+
+    .heading h1 {
+        font-size: 2.8rem;
+    }
+
+
+
+
+    .cosmetics h2,
+    .pharma h2,
+    .food h2 {
+        font-size: 2.2rem;
+    }
+
+    .cosmetics_text ul li,
+    .pharma_text ul li,
+    .food_text ul li {
+        line-height: 35px;
+        font-size: 1rem;
+    }
+
+
+    .nutraceuticals h2,
+    .machinery h2,
+    .packaging h2 {
+        font-size: 2.2rem;
+    }
+
+    .nutraceuticals_text ul li,
+    .machinery_text ul li,
+    .packaging_text ul li {
+        font-size: 1rem;
+    }
+
+}
+
+
+@media screen and (max-width: 572px) {
+    nav ul {
+        width: 100%;
+    }
+
+    .main_product_heading h2 {
+        font-size: 5rem;
+        left: 18%;
+    }
+
+    .main_carousel {
+        height: 450px;
+    }
+
+    #dragcontainer {
+        top: 10%;
+    }
+
+    .heading h1 {
+        font-size: 2.2rem;
+    }
+
+    .heading .image {
+        width: 2.9rem;
+        height: 60px;
+    }
+
+    .about p {
+        color: #464545;
+        margin-bottom: 10px;
+    }
+
+    .cosmetics,
+    .pharma,
+    .food {
+        margin-top: 25px;
+    }
+
+    .cosmetics_data,
+    .pharma_data,
+    .food_data {
+        flex-direction: column;
+    }
+
+    .cosmetics_image,
+    .pharma_image,
+    .food_image {
+        width: 100%;
+        height: 200px;
+        margin-right: 0px;
+    }
+
+    .cosmetics_text,
+    .pharma_text,
+    .food_text {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        justify-content: left;
+        font-size: 1rem;
+        padding-left: 50px;
+        margin-top: 15px;
+    }
+
+    .nutraceuticals,
+    .machinery,
+    .packaging {
+        margin-top: 25px;
+    }
+
+    .packaging_data,
+    .machinery_data,
+    .nutraceuticals_data {
+        flex-direction: column-reverse;
+    }
+
+    .packaging_image,
+    .machinery_image,
+    .nutraceuticals_image {
+        width: 100%;
+        height: 200px;
+        margin-right: 0;
+        margin-bottom: 21px;
+    }
+
+    .packaging_text,
+    .machinery_text,
+    .nutraceuticals_text {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        justify-content: left;
+        font-size: 1rem;
+        padding-left: 50px;
+    }
+}
+
+
+@media screen and (max-width: 426px) {
+    nav .logo {
+        width: 100px;
+    }
+
+    .active .fa-xmark {
+        top: 8px;
+        font-size: 1.9rem;
+    }
+
+    .main_product_heading h2 {
+        font-size: 4.5rem;
+        left: 15%;
+    }
+
+    .about p {
+        font-size: 0.9rem;
+        word-spacing: 1px;
+        line-height: 23px;
+        text-align: left;
+        font-weight: 500;
+    }
+
+    .heading h1 {
+        font-size: 1.6rem;
+    }
+
+    .cosmetics h2,
+    .pharma h2,
+    .food h2 {
+        font-size: 1.5rem;
+    }
+
+    .cosmetics_text,
+    .pharma_text,
+    .food_text {
+        padding-left: 34px;
+    }
+
+    .cosmetics_text ul li,
+    .pharma_text ul li,
+    .food_text ul li {
+        line-height: 23px;
+        font-size: 0.9rem;
+    }
+
+    .nutraceuticals h2,
+    .machinery h2,
+    .packaging h2 {
+        font-size: 1.5rem;
+    }
+
+    .packaging_text,
+    .machinery_text,
+    .nutraceuticals_text {
+        padding-left: 34px;
+    }
+
+    .nutraceuticals ul li,
+    .machinery ul li,
+    .packaging ul li {
+        line-height: 23px;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .main_product_heading h2 {
+        font-size: 4rem;
+        left: 14.5%;
+    }
+
+    .about {
+        width: 90%;
+    }
+
+    .about p {
+        font-size: 0.8rem;
+        line-height: 21px;
+    }
+
+    .heading h1 {
+        font-size: 1.5rem;
+    }
+
+    .heading .image {
+        width: 2.7rem;
+    }
+
+    .cosmetics h2,
+    .pharma h2,
+    .food h2 {
+        font-size: 1.4rem;
+    }
+
+    .cosmetics_image,
+    .pharma_image,
+    .food_image {
+        height: 190px;
+    }
+
+    .cosmetics_text,
+    .pharma_text,
+    .food_text {
+        padding-left: 9px;
+    }
+
+    .cosmetics_text ul li,
+    .pharma_text ul li,
+    .food_text ul li {
+        line-height: 21px;
+        font-size: 0.8rem;
+    }
+
+    .nutraceuticals h2,
+    .machinery h2,
+    .packaging h2 {
+        font-size: 1.4rem;
+    }
+
+    .packaging_image,
+    .machinery_image,
+    .nutraceuticals_image {
+        height: 190px;
+    }
+
+    .packaging_text,
+    .machinery_text,
+    .nutraceuticals_text {
+        padding-left: 9px;
+    }
+
+    .nutraceuticals ul li,
+    .machinery ul li,
+    .packaging ul li {
+        line-height: 21px;
+        font-size: 0.8rem;
+    }
+
+}
