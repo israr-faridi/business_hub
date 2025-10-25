@@ -564,6 +564,7 @@ form#form button:hover {
         z-index: 1;
         background: #e0e0e0;
         height: 100vh;
+        z-index: 99;
         box-shadow: -2px 0 15px rgba(0, 0, 0, 0.1);
     }
 
@@ -578,6 +579,7 @@ form#form button:hover {
         padding-right: 50px;
         display: block;
         position: fixed;
+        z-index: 1000;
 
     }
 
