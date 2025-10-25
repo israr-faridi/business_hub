@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="assets/images/f.png"/>
+    <link rel="icon" type="image/x-icon" href="assets/images/f.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <title>Business Hub</title>
 </head>
 
@@ -43,49 +44,37 @@
                  //Navbar End//
              ////////////////-->
 
-            <!-- Product Heading -->
-            <div class="main_product_heading">
-                <h2> Products</h2>
-            </div>
-            <!-- ///////////////////// 
-            //3D CAROUSEL START//
-            /////////////////////-->
-            <div class="main_carousel ">
-                <div id="dragcontainer">
-                    <div id="spincontainer">
 
-                        <img src="https://static.vecteezy.com/system/resources/previews/054/716/271/large_2x/vanity-set-3d-render-colorful-modern-stylish-design-free-png.png"
-                            alt="Cosmetics">
+            <!-- /////////////////// 
+                //Slider START//
+                ////////////////-->
+            <div class="swiper-contaier">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./assets/pharma.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/NUTRACEUTICALS.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/food.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/Cosmetic.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/Inhaler1.jpg" alt="">
+                        </div>
 
-                        <img src="https://static.vecteezy.com/system/resources/previews/068/103/996/non_2x/asthma-inhaler-and-spacer-medical-device-illustration-3d-render-transparent-background-free-png.png"
-                            alt="">
-
-                        <img src="https://static.vecteezy.com/system/resources/previews/056/089/388/large_2x/herbal-extract-science-of-nature-s-remedy-free-png.png"
-                            alt="Nutraceutical">
-
-                        <img src="https://static.vecteezy.com/system/resources/previews/056/761/789/large_2x/impressive-contemporary-colorful-gear-machine-3d-render-of-interlocking-cogs-professional-free-png.png"
-                            alt="Machinery">
-
-                        <img src="https://static.vecteezy.com/system/resources/previews/059/439/777/large_2x/magnificent-artistic-laboratory-equipment-test-tubes-original-free-png.png"
-                            alt="Packaging">
-
-                        <img src="https://static.vecteezy.com/system/resources/previews/055/922/429/large_2x/fruity-smoothie-splash-berries-kiwi-strawberry-blend-free-png.png"
-                            alt="Food">
-
-                        <img src="https://static.vecteezy.com/system/resources/previews/057/657/005/large_2x/stunning-vintage-medical-pills-capsules-white-background-cutout-exclusive-free-png.png"
-                            alt="Pharma">
-
-
-                        <p>Business Hub</p>
                     </div>
-                    <div id="ground"></div>
-
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
             <!-- /////////////////// 
+                //Slider End//
+                ////////////////-->
 
-            //3D CAROUSEL END//
-            ///////////////////-->
 
         </div>
 
@@ -205,7 +194,7 @@
                                 <li>Aluminum Blister Foil (PTP)</li>
                                 <li>Rigid PVC Film</li>
                                 <li>Rigid PVC / LDPE PET / LDPE PVC / EOE Film</li>
-                                <li>Strip Foil</li> 
+                                <li>Strip Foil</li>
                                 <li>Laminated Film Bag</li>
                                 <li>High Barrier PCTFE / PVC Film</li>
                                 <li>Rigid PVC / PVDC Film</li>
@@ -271,7 +260,7 @@
                 </div>
 
 
-              <!-- MACHINERY -->
+                <!-- MACHINERY -->
                 <div class="machinery right_side_image">
                     <h2 id="machinery">MACHINERY</h2>
                     <div class="machinery_data">
@@ -309,9 +298,71 @@
 
 
         </div>
-        <script src="https://kit.fontawesome.com/9cd68c0af6.js" crossorigin="anonymous"></script>
 
-        <script src="./script.js"></script>
+
+
+        <!-- //////////////////////////
+         ////// Contact Us START//////
+         ////////////////////////////-->
+        <div class="contact_us_container">
+            <h2>Contact Us</h2>
+
+
+            <form action="https://api.web3forms.com/submit" method="POST" id="form">
+
+                <!-- Your Access key here. Don't worry this can be public -->
+                <input type="hidden" name="access_key" value="b7d57153-17df-471b-9427-e943fa3c3b99">
+
+
+
+                <!-- Add your form fields here -->
+                <input type="text" name="name" required placeholder="Enter Your Name">
+                <input type="email" name="email" required placeholder="Enter Your Email">
+                <textarea name="message" required placeholder="Enter Your Message"></textarea>
+
+                <div class="button">
+                    <button type="submit">Submit Form</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- ///////////////////////
+         ////// Contact Us END//////
+         //////////////////////////-->
+
+        <!-- Footer Start -->
+        <footer>
+            <div class="footer-content">
+                <div class="location">
+                    <h2>Location</h2>
+                    <div class="location-frame">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.158117199151!2d67.08464587541624!3d24.9266828778861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f49f18964bd%3A0x8816c51573c39f4a!2sKarson%20Complex%2C%20Lyari%20Expy%2C%20Block%202%20Gulshan-e-Iqbal%2C%20Karachi%2C%20Pakistan!5e0!3m2!1sen!2s!4v1761410528130!5m2!1sen!2s"
+                            style="border:0; width: 100%; height: 300px;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="contact-data">
+                    <h2>Contact Info</h2>
+                    <p><i class="fa-solid fa-location-dot"></i>M/S BUSINESS HUB
+                        Office # B9, Karson Complex,
+                        Gulshan Iqbal Block # 2, Karachi, PAKISTAN
+                    </p>
+                    <p><i class="fa-solid fa-phone"></i>0092-21-3482 1047</p>
+                    <p><i class="fa-solid fa-phone"></i> 0092 333 894 9753</p>
+                    <p><i class="fa-solid fa-envelope"></i> info@bizz-hub.org</p>
+                </div>
+            </div>
+    </div>
+    <p class="footer-bottom">&copy; 2025 Business Hub. All rights reserved.</p>
+    </footer>
+    <!-- Footer End -->
+
+    </div>
+    <script src="https://kit.fontawesome.com/9cd68c0af6.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
