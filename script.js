@@ -48,6 +48,7 @@ const swiper = new Swiper('.swiper', {
 //Slider JS END//
 /////////////////*/
 
+
 // function goToPage() {
 //     window.location.href = "https://www.w3schools.com"; // This will redirect to the specified URL
 // }

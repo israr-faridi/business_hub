@@ -340,6 +340,124 @@ nav ul li a:hover {
 /* Raw Material End */
 
 
+/*////////////////////////////
+//// Bottom Slider Start/////  
+//////////////////////////////*/
+.bottom-swiper-contaier {
+    border-radius: 16px;
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    background-color: #e0e0e0;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    /* color: #fff; */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 130px;
+}
+
+.bottom-swiper-heading {
+    margin: 30px 0;
+}
+
+.bottom-swiper-heading h1 {
+    color: #154A94;
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.bottom-swiper {
+    /* justify-content: center;
+    width: 70%;
+    height: 100%; */
+    width: 60%;
+    height: 100%;
+    /* background: #ffffff;  */
+    padding: 12px;
+    /* box-shadow: 0 20px 40px rgba(0,0,0,0.18), 0 8px 16px rgba(0,0,0,0.08); */
+
+}
+
+
+.bottom-swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e0e0e0;
+}
+
+.bottom-swiper-slide p {
+    font-size: 1.5rem;
+    color: #154A94;
+    background: #e0e0e0;
+    margin-bottom: 20px;
+    color: #464545;
+    font-weight: 600;
+}
+
+.bottom-swiper-slide .image {
+    border-radius: 16px;
+    width: 100%;
+    height: 100%;
+
+}
+
+.bottom-swiper-slide .image img {
+    border-radius: 16px;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 78px 24px rgba(0, 0, 0, 0.18);
+    filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.15));
+    transition: transform .35s ease, box-shadow .35s ease, filter .35s ease;
+}
+
+.bottom-swiper-slide .image img:hover {
+    width: 100%;
+    border-radius: 16px;
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 82px 48px rgba(0, 0, 0, 0.24);
+    filter: drop-shadow(0 18px 36px rgba(0, 0, 0, 0.20));
+}
+
+.bottom-swiper-slide video {
+
+    border-radius: 16px;
+    width: 100%;
+    height: 100%;
+
+}
+
+.bottom-swiper-slide .video video {
+    border-radius: 16px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 78px 24px rgba(0, 0, 0, 0.18);
+    filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.15));
+    transition: transform .35s ease, box-shadow .35s ease, filter .35s ease;
+}
+
+.bottom-swiper-slide .video video:hover {
+    width: 100%;
+    border-radius: 16px;
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 82px 48px rgba(0, 0, 0, 0.24);
+    filter: drop-shadow(0 18px 36px rgba(0, 0, 0, 0.20));
+}
+
+/* ///////////////////////////
+//// Bottom Slider End //////
+/////////////////////////////*/
+
+
+
 /* /////////////////////////
 ///////// Contact Us ///////
 //////////////////////////*/
@@ -481,6 +599,7 @@ form#form button:hover {
     font-weight: 500;
     line-height: 25px;
 }
+
 .footer-bottom {
     width: 100%;
     text-align: center;
@@ -489,6 +608,7 @@ form#form button:hover {
     color: #ffffff;
     font-size: 1rem;
 }
+
 /* /////////////////////////
 //////// Responsive /////// 
 //////////////////////////*/
@@ -695,6 +815,10 @@ form#form button:hover {
     }
 
 
+    .heading .image {
+        width: 2.4rem;
+    }
+
 
     .heading h1 {
         font-size: 2.2rem;
@@ -772,6 +896,7 @@ form#form button:hover {
         justify-content: left;
         font-size: 1rem;
         padding-left: 50px;
+
     }
 }
 
@@ -839,6 +964,22 @@ form#form button:hover {
     .packaging ul li {
         line-height: 23px;
         font-size: 0.9rem;
+    }
+
+    .bottom-swiper {
+        width: 85%;
+    }
+
+    .bottom-swiper-heading h1 {
+        font-size: 2.5rem;
+    }
+
+    .bottom-swiper-slide p {
+        font-size: 1.3rem;
+    }
+
+    .contact_us_container h2 {
+        font-size: 2.5rem;
     }
 }
 
@@ -918,4 +1059,20 @@ form#form button:hover {
         font-size: 0.8rem;
     }
 
+
+    .bottom-swiper-heading {
+        margin-bottom: 17px;
+    }
+
+    .bottom-swiper-heading h1 {
+        font-size: 2.2rem;
+    }
+
+    .bottom-swiper-slide p {
+        font-size: 1.2rem;
+    }
+
+    .bottom-swiper-slide video {
+        height: 50vh;
+    }
 }
